@@ -15,6 +15,13 @@ A collection of tiny Rust applications and concepts implemented to showcase my f
   * Tools/Crates used:
     * None, just pure Rust!
 
+* [JSON to CSV](/json_to_csv/)
+  * Summary: Simple app that consults an API and stores the results in a CSV file.
+  * Tools/Crates used:
+    * [rust-csv](https://docs.rs/csv/latest/csv/)
+    * [serde](https://serde.rs/)
+    * [reqwest](https://docs.rs/reqwest/0.11.11/reqwest/)
+
 ### Web applications
 
 Not yet!
