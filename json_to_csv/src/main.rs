@@ -1,8 +1,7 @@
 use reqwest::{blocking::Client, Error};
 use serde::{Deserialize, Serialize};
-use std::fs::OpenOptions;
+use std::fs::{File, OpenOptions};
 use std::path::Path;
-use std::fs::File;
 
 #[derive(Serialize, Deserialize, Debug)]
 #[serde(rename_all = "camelCase")]
@@ -45,14 +44,13 @@ fn open_file_in_correct_mode(filename: &str) -> (File, bool) {
             .expect("Unable to open file");
         (file_object, false)
     }
-
 }
 
-fn select_file_writer(file_exists: bool, file_obj: File) -> csv::Writer<File>{
+fn select_file_writer(file_exists: bool, file_obj: File) -> csv::Writer<File> {
     if file_exists {
         csv::WriterBuilder::new()
-        .has_headers(false)
-        .from_writer(file_obj)
+            .has_headers(false)
+            .from_writer(file_obj)
     } else {
         csv::Writer::from_writer(file_obj)
     }
@@ -60,7 +58,7 @@ fn select_file_writer(file_exists: bool, file_obj: File) -> csv::Writer<File>{
 
 fn write_to_csv(user: User) -> Result<(), Box<dyn std::error::Error>> {
     let (file, file_exists) = open_file_in_correct_mode("data.csv");
-    let mut wtr = select_file_writer(file_exists,file);
+    let mut wtr = select_file_writer(file_exists, file);
 
     wtr.serialize(user)?;
     wtr.flush()?;
