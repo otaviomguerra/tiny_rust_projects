@@ -22,10 +22,18 @@ A collection of tiny Rust applications and concepts implemented to showcase my f
     * [serde](https://serde.rs/)
     * [reqwest](https://docs.rs/reqwest/0.11.11/reqwest/)
 
+* [coin-rs](/coin-rs/)
+  * Summary: A simple application to keep track of currency conversion rates to Brazilian Real.
+
 ### Web applications
 
 Not yet!
 
 ### Concepts/PoCs
 
-Not yet!
+* [Rabbit-rs](/rabbit-rs/)
+  * Summary: Simple RabbitMQ consumer.
+  * Tools/Crates used:
+    * [amiquip](https://crates.io/crates/amiquip)
+    * [serde](https://serde.rs/)
+    * [reqwest](https://docs.rs/reqwest/0.11.11/reqwest/)
