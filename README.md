@@ -10,8 +10,13 @@ A collection of tiny Rust applications and concepts implemented to showcase my f
 
 ### CLI applications
 
+* [echo-rs](/echo-rs/)
+* Summary: Simple UNIX echo command clone implemented in Rust.
+* Tools/Crates used:
+  * [clap](https://crates.io/crates/clap)
+
 * [Minigrep](/minigrep/)
-  * Summary: Simple grep clone implemented in Rust based on "The book" implementation.
+  * Summary: Simple UNIX grep command clone implemented in Rust based on "The book" implementation.
   * Tools/Crates used:
     * None, just pure Rust!
 
@@ -22,7 +27,7 @@ A collection of tiny Rust applications and concepts implemented to showcase my f
     * [serde](https://serde.rs/)
     * [reqwest](https://docs.rs/reqwest/0.11.11/reqwest/)
 
-* [coin-rs](/coin-rs/)
+* [coin-rs](/coin-rs/) (TODO)
   * Summary: A simple application to keep track of currency conversion rates to Brazilian Real.
 
 ### Web applications
@@ -32,7 +37,7 @@ Not yet!
 ### Concepts/PoCs
 
 * [Rabbit-rs](/rabbit-rs/)
-  * Summary: Simple RabbitMQ consumer.
+  * Summary: Simple RabbitMQ message consumer.
   * Tools/Crates used:
     * [amiquip](https://crates.io/crates/amiquip)
     * [serde](https://serde.rs/)
